@@ -26,6 +26,10 @@ Manages rbenv plugins - add, list and remove
     $ rbenv plugin rm travis
     Deleted travis plugin
 
+## Todo
+
+* Tests!
+
 ## Credits
 
 Started on awesome @relevance fridays!
