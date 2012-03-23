@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'boson/runner'
+require 'fileutils'
+
+class PluginRunner < Boson::Runner
+  desc 'List rbenv plugins'
+  def list
+    puts Dir[root + '/plugins/*'].map {|f| File.basename(f).sub('rbenv-', '') }
+  end
+
+  desc 'Add a plugin'
+  def add(url)
+    url = "http://github.com/#{url}" unless url[/^(git|http)/]
+    name = url[%r</(rbenv-\w+)>, 1] or abort "Can't detect plugin name"
+    system("git clone #{url} #{root}/plugins/#{name}")
+  end
+
+  desc 'Remove a plugin'
+  def rm(name)
+    FileUtils.rm_rf("#{root}/plugins/rbenv-#{name}")
+    puts "Deleted #{name} plugin"
+  end
+
+  private
+  def root
+    ENV['RBENV_ROOT'] ||= '~/.rbenv'
+  end
+end
+
+PluginRunner.start
