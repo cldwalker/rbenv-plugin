@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+#/ usage: rbenv plugin [add|list|rm|help]
+#/
+#/ Manages plugins by adding, deleting and listing them.
 
 require 'boson/runner'
 require 'fileutils'
