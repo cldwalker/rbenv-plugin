@@ -5,7 +5,7 @@ Manages rbenv plugins - add, list and remove
 ## Install
 
     $ mkdir -p $RBENV_ROOT/plugins
-    $ git clone git://github.com/cldwalker/rbenv-travis.git $RBENV_ROOT/plugins/rbenv-travis
+    $ git clone git://github.com/cldwalker/rbenv-plugin.git $RBENV_ROOT/plugins/rbenv-plugin
     $ gem install boson
 
 ## Usage
