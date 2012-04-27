@@ -32,4 +32,5 @@ Manages rbenv plugins - add, list and remove. Only works on Ruby 1.9.
 
 ## Credits
 
-Started on awesome @relevance fridays!
+* Started on awesome @relevance fridays!
+* Thanks to pull requests from: @yb66
