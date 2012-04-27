@@ -1,6 +1,6 @@
 ## Description
 
-Manages rbenv plugins - add, list and remove
+Manages rbenv plugins - add, list and remove. Only works on Ruby 1.9.
 
 ## Install
 
